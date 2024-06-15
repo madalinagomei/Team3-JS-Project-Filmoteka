@@ -1,0 +1,118 @@
+/* *******************************************Responsive doamne-ajuta************************************************************** */
+/* mobile */
+/* @media screen and (min-resolution: 2dppx) {
+  .absolute {
+    background-image: url("/src/images/header-bg-mob@2x.jpg");
+  }
+} */
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .body {
+    margin: 0 auto;
+  }
+
+  .absolute {
+    background-image: url(/src/images/header-bg-mob.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0px;
+  }
+  .hero-carousel {
+    display: none;
+  }
+  .hero-carousel-item {
+    display: none;
+  }
+  .hero-overlay {
+    height: 100vh;
+    padding: 32px;
+  }
+  .close {
+    width: 30px;
+  }
+  .switch {
+    display: none;
+  }
+
+  .nav {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .search-form__input {
+    padding: 14px 120px;
+  }
+
+  .logo__header-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .logo__link {
+    align-self: center;
+  }
+
+  #library-movie-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #movie-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #movie-details {
+    width: 300px;
+    height: 100%;
+  }
+  #movie-details img {
+    width: 240px;
+    height: 357px;
+  }
+  .modal-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #movie-details h2 {
+    font-size: 20px;
+  }
+  .no-movies {
+    margin: 0;
+  }
+  .auth-trigger {
+    visibility: hidden;
+  }
+}
+
+/* -------------------MODAL TEAM-------------------------- */
+
+.team-item {
+  @media screen and (max-width: 1199px) and (min-width: 320px) {
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 1);
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .modal-content {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  .auth-trigger {
+    visibility: hidden;
+  }
+}
