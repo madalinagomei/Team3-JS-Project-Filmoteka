@@ -130,15 +130,13 @@ body {
   height: 59px;
   transition: stroke var(--time) var(--function-animate),
     rotate var(--time) var(--function-animate);
-
-  .logo__link:hover &,
-  .logo__link:focus & {
-    rotate: 180deg;
-    fill: transparent;
-    stroke: var(--accent-color);
-  }
 }
-
+.logo__link:hover,
+.logo__link:focus {
+  rotate: 180deg;
+  fill: transparent;
+  stroke: var(--accent-color);
+}
 .logo__title {
   font-family: 'Roboto';
   display: inline-block;
@@ -148,7 +146,7 @@ body {
   margin-left: 8px;
   color: #fff;
 
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     font-family: 'Roboto';
     display: inline-block;
     font-weight: 500;
@@ -161,7 +159,7 @@ body {
   @media (min-width: 1158px) {
     margin-left: 10px;
     font-size: 64px;
-  }
+  } */
 }
 a {
   text-decoration: none;
@@ -486,8 +484,8 @@ input:checked + .slider:before {
   position: fixed;
   bottom: 700px;
   right: 20px;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   background: url(/src/images/up-btn.png);
   background-size: cover;
   z-index: 50;
@@ -496,15 +494,6 @@ input:checked + .slider:before {
   opacity: 0;
   transition: 0.5s;
   border: none;
-
-  @media screen and (min-width: 768px) {
-    right: 40px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 50px;
-    height: 50px;
-  }
 }
 
 .upward.active {
@@ -847,7 +836,7 @@ input:checked + .slider:before {
   height: 44px;
 }
 .card-front1 {
-  background-image: url('/src/images/stefan.JPG');
+  background-image: url('/src/images/stefan.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -857,28 +846,28 @@ input:checked + .slider:before {
   background-repeat: no-repeat;
 }
 .card-front2 {
-  background-image: url('/src/images/sara.JPG');
+  background-image: url('/src/images/sara.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .card-back2 {
-  background-image: url('/src/images/meme.jpg');
+  background-image: url('/src/images/meme.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .card-front3 {
-  background-image: url('/src/images/richard.JPG');
+  background-image: url('/src/images/richard.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .card-back3 {
-  background-image: url('/src/images/back-pic.jpg');
+  background-image: url('/src/images/back-pic.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .card-front4 {
-  background-image: url('/src/images/cezara.JPG');
+  background-image: url('/src/images/cezara.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -890,12 +879,12 @@ input:checked + .slider:before {
 }
 
 .card-front5 {
-  background-image: url('/src/images/madalina.JPG');
+  background-image: url('/src/images/madalina.png');
   background-size: cover;
   background-repeat: no-repeat;
 }
 .card-back5 {
-  background-image: url('/src/images/madalina__back.JPG');
+  background-image: url('/src/images/madalina__back.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
