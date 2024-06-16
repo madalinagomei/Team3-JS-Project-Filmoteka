@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const carouselItems = document.querySelectorAll('.hero-carousel-item');
   let currentIndex = 0;
+  const intervalTime = 10000;
 
   function showNextImage() {
     carouselItems[currentIndex].style.display = 'none';
@@ -439,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const library = JSON.parse(localStorage.getItem(currentLibraryView)) || [];
 
     if (library.length === 0) {
-      libraryMovieList.innerHTML = `<div class="no-movies"><img src="../src/images/no-movies.gif"></div>`;
+      libraryMovieList.innerHTML = `<div class="no-movies"><img src="/src/images/no-movies.gif"></div>`;
       return;
     }
 
