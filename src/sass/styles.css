@@ -131,8 +131,8 @@ body {
   transition: stroke var(--time) var(--function-animate),
     rotate var(--time) var(--function-animate);
 }
-.logo__link:hover,
-.logo__link:focus {
+.logo__link:hover .logo__header-icon,
+.logo__link:focus .logo__header-icon {
   rotate: 180deg;
   fill: transparent;
   stroke: var(--accent-color);

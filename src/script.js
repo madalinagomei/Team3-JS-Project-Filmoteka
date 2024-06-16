@@ -439,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const library = JSON.parse(localStorage.getItem(currentLibraryView)) || [];
 
     if (library.length === 0) {
-      libraryMovieList.innerHTML = `<div class="no-movies"><img src="/src/images/no-movies.gif"></div>`;
+      libraryMovieList.innerHTML = `<div class="no-movies"><img src="../src/images/no-movies.gif"></div>`;
       return;
     }
 
