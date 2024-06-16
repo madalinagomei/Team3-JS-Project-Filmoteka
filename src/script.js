@@ -440,46 +440,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const library = JSON.parse(localStorage.getItem(currentLibraryView)) || [];
 
     if (library.length === 0) {
-      libraryMovieList.innerHTML = `<div class="no-movies"><img src="/src/images/no-movies.gif"></div>`;
-      return;
-    }
+      noMoviesDiv.style.display = 'flex';
+    } else {
+      noMoviesDiv.style.display = 'none';
 
-    library.forEach(movie => {
-      const movieItem = document.createElement('div');
-      movieItem.classList.add('movie-item', 'photo');
-      movieItem.innerHTML = `
+      library.forEach(movie => {
+        const movieItem = document.createElement('div');
+        movieItem.classList.add('movie-item', 'photo');
+        movieItem.innerHTML = `
       <img src="${imgBaseUrl + movie.poster_path}" alt="${movie.title}">
       <h3>${movie.title}</h3>
       <p>${movie.genre_ids.map(genreId => genres[genreId]).join(', ')} | ${
-        movie.release_date ? movie.release_date.split('-')[0] : 'N/A'
-      } </p>
+          movie.release_date ? movie.release_date.split('-')[0] : 'N/A'
+        } </p>
       <button class="remove-from-library" data-id="${
         movie.id
       }" data-type="${currentLibraryView}">Remove</button>
     `;
 
-      movieItem
-        .querySelector('.remove-from-library')
-        .addEventListener('click', e => {
-          e.stopPropagation();
-          removeFromLibrary(movie, currentLibraryView);
+        movieItem
+          .querySelector('.remove-from-library')
+          .addEventListener('click', e => {
+            e.stopPropagation();
+            removeFromLibrary(movie, currentLibraryView);
+          });
+
+        movieItem.addEventListener('click', () => {
+          displayMovieDetails(movie);
         });
-
-      movieItem.addEventListener('click', () => {
-        displayMovieDetails(movie);
+        libraryMovieList.appendChild(movieItem);
       });
-      libraryMovieList.appendChild(movieItem);
-    });
-  }
+    }
 
-  // remove
-  function removeFromLibrary(movieToRemove, type) {
-    let library = JSON.parse(localStorage.getItem(type)) || [];
-    library = library.filter(movie => movie.id !== movieToRemove.id);
-    localStorage.setItem(type, JSON.stringify(library));
-    Notiflix.Notify.success('Successfully removed movie from library.');
-    // displayMovieDetails(movieToRemove);
-    displayLibrary();
+    // remove
+    function removeFromLibrary(movieToRemove, type) {
+      let library = JSON.parse(localStorage.getItem(type)) || [];
+      library = library.filter(movie => movie.id !== movieToRemove.id);
+      localStorage.setItem(type, JSON.stringify(library));
+      Notiflix.Notify.success('Successfully removed movie from library.');
+      // displayMovieDetails(movieToRemove);
+      displayLibrary();
+    }
   }
 });
 

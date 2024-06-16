@@ -699,7 +699,8 @@ input:checked + .slider:before {
 }
 
 .no-movies {
-  margin-left: 110px;
+  display: flex;
+  justify-content: center;
 }
 
 /* ==========card style========= */
