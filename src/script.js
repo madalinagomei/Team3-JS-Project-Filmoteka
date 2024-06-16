@@ -439,6 +439,8 @@ document.addEventListener('DOMContentLoaded', () => {
     libraryMovieList.innerHTML = '';
     const library = JSON.parse(localStorage.getItem(currentLibraryView)) || [];
 
+    const noMoviesDiv = document.querySelector('.no-movies');
+
     if (library.length === 0) {
       noMoviesDiv.style.display = 'flex';
     } else {
@@ -448,15 +450,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const movieItem = document.createElement('div');
         movieItem.classList.add('movie-item', 'photo');
         movieItem.innerHTML = `
-      <img src="${imgBaseUrl + movie.poster_path}" alt="${movie.title}">
-      <h3>${movie.title}</h3>
-      <p>${movie.genre_ids.map(genreId => genres[genreId]).join(', ')} | ${
+        <img src="${imgBaseUrl + movie.poster_path}" alt="${movie.title}">
+        <h3>${movie.title}</h3>
+        <p>${movie.genre_ids.map(genreId => genres[genreId]).join(', ')} | ${
           movie.release_date ? movie.release_date.split('-')[0] : 'N/A'
         } </p>
-      <button class="remove-from-library" data-id="${
-        movie.id
-      }" data-type="${currentLibraryView}">Remove</button>
-    `;
+        <button class="remove-from-library" data-id="${
+          movie.id
+        }" data-type="${currentLibraryView}">Remove</button>
+      `;
 
         movieItem
           .querySelector('.remove-from-library')
@@ -478,12 +480,10 @@ document.addEventListener('DOMContentLoaded', () => {
       library = library.filter(movie => movie.id !== movieToRemove.id);
       localStorage.setItem(type, JSON.stringify(library));
       Notiflix.Notify.success('Successfully removed movie from library.');
-      // displayMovieDetails(movieToRemove);
       displayLibrary();
     }
   }
 });
-
 //btn to top smooth animation
 function scrollToTop() {
   const c = document.documentElement.scrollTop || document.body.scrollTop;
@@ -577,12 +577,3 @@ authTabs.forEach(tab => {
     });
   });
 });
-
-// +++++++++++++++---------
-
-// // it's up to you...
-// if (youWant() === true) {
-//   youCan();
-// } else {
-//   youCant();
-// }

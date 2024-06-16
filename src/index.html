@@ -158,12 +158,16 @@
         <button class="library-link__btn" id="watched-btn">Watched</button>
         <button class="library-link__btn" id="queue-btn">Queue</button>
       </div>
-      <div id="library-movie-list"></div>
-      <div class="no-movies"><img src="/src/images/no-movies.gif" /></div>
+      <div id="library-movie-list" class="movie-list"></div>
+      <div class="no-movies">
+        <img src="/src/images/no-movies.gif" alt="No movie available" />
+      </div>
     </main>
 
     <div id="movie-details" class="hidden">
-      <!-- movie details insert here -->
+      <div class="modal-content">
+        <!-- movie details insert here -->
+      </div>
     </div>
     <div id="overlay" class="hidden"></div>
 
@@ -194,9 +198,9 @@
               <p class="team-functional">
                 •JavaScript magic - added notiflix updates whenever movies are
                 added to lists General layout fixes Button functionality <br />
-                • Styling Miscellaneous style improvements Did the math and
-                changed the code so there would only be 9 movies displayed on
-                the page
+                • Styling Miscellaneous style improvements<br />
+                • Did the math and changed the code so there would only be 9
+                movies displayed on the page
               </p>
               <ul class="social-list">
                 <li class="social-list__item list">
@@ -415,7 +419,7 @@
             </div>
             <div class="team-block">
               <h3 class="team-name">Madalina</h3>
-              <h4 class="team-position">Team lead + Developer</h4>
+              <h4 class="team-position">Team Lead + Developer</h4>
               <p class="team-functional">
                 • Prepared the foundational structure of the site by coding the
                 HTML and parts of the CSS and JavaScript, including adding

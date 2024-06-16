@@ -699,8 +699,9 @@ input:checked + .slider:before {
 }
 
 .no-movies {
-  display: flex;
+  display: none;
   justify-content: center;
+  align-items: center;
 }
 
 /* ==========card style========= */
