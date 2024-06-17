@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <img src="${
     imgBaseUrl + (movie.poster_path ? movie.poster_path : '/default.jpg')
-  }" alt="${movie.title}" onerror="this.src='/src/images/fallback-orange.png';">
+  }" alt="${movie.title}" onerror="this.src='/src/images/madalina.png';">
   <div class="glow-wrap">
     <i class="glow"></i>
   </div>
