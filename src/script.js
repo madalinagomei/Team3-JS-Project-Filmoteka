@@ -278,7 +278,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
-
+    // remove
+    function removeFromLibrary(movieToRemove, type, toDisplayMovieDetails = false) {
+      let library = JSON.parse(localStorage.getItem(type)) || [];
+      library = library.filter(movie => movie.id !== movieToRemove.id);
+      localStorage.setItem(type, JSON.stringify(library));
+      Notiflix.Notify.success('Successfully removed movie from library.');
+      if(toDisplayMovieDetails) {
+        displayMovieDetails(movieToRemove);
+      } 
+      displayLibrary();
+    }
   // ------------------------------Display movie details------------------------------ //
   function displayMovieDetails(movie) {
     let addOrRemoveWatched = 'Add to Watched';
@@ -347,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       </div>
       `;
-    console.log(movie);
+    // console.log(movie);
     movieDetails.classList.remove('hidden');
     overlay.classList.remove('hidden');
 
@@ -474,17 +484,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // remove
-    function removeFromLibrary(movieToRemove, type, toDisplayMovieDetails = false) {
-      let library = JSON.parse(localStorage.getItem(type)) || [];
-      library = library.filter(movie => movie.id !== movieToRemove.id);
-      localStorage.setItem(type, JSON.stringify(library));
-      Notiflix.Notify.success('Successfully removed movie from library.');
-      if(toDisplayMovieDetails) {
-        displayMovieDetails(movieToRemove);
-      } 
-      displayLibrary();
-    }
+    
   }
 });
 //btn to top smooth animation
