@@ -1,75 +1,34 @@
-# Parcel template
+Hey there 👋
 
-Acest proiect a fost creat cu ajutorul Parcel. Pentru familiarizare și configurarea funcțiilor suplimentare [consultați documentația](https://parceljs.org/).
 
-## Pregătirea noului proiect
+After completing the JavaScript course, we wanted to reinforce the 📌 knowledge we gained and implement the 📃 final project within two weeks.
 
-1. Asigură-te că pe PC este instalată versiunea LTS Node.js.
-   [Descarcă și instalează](https://nodejs.org/en/) dacă este necesar.
-2. Clonează acest repository.
-3. Schimbă numele folderului din `parcel-project-template` în numele proiectului tău.
-4. Creează un repository nou și gol pe GitHub.
-5. Deschide proiectul în VSCode, pornește terminalul și conectează proiectul cu repository-ul GitHub
-   [conform instrucțiunilor](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url).
-6. Setează dependențele proiectului în terminal cu ajutorul comenzii `npm install` .
-7. Pornește modul dezvoltator prin rularea comenzii `npm start`.
-8. Accesează  în browser pagina  [http://localhost:1234](http://localhost:1234).
-   Această pagină se va reîncărca automat după salvarea modificărilor efectuate în fișiere proiectului.
+🎨 We developed three versions of the “Filmoteka” website: mobile, tablet, and desktop.
 
-## Fișiere și foldere
+🛠️ We were provided with technical specifications describing the functionality of the future site, and we reserved the right to make improvements by adding features like user profiles and a direct “remove” button for films on the film card, without opening a modal.
 
-- Toate fișierele de stil trebuie să se afle în folderul `src/sass` să fie importate în fișiere de stil ale paginilor. De exemplu, pentru `index.html` fișierul de stiluri se numește
-  `index.scss`.
-- Adaugă imaginile în folderul `src/images`. Constructorul le va optimiza, dar numai atunci când va fi implementată versiunea de producție a proiectului. Toate acestea se realizează în cloud pentru a nu împovăra calculatorul, deoarece pe mașinile slabe aceasta poate dura mult timp. 
+👨‍🎓 The project involved five people, as follows:
 
-## Implementare
-Pentru a configura implimentarea proiectului, trebuie de efectuat câțiva pași suplimentari pentru configurarea repository-ului. Accesează fila `Settings` și în subsecțiunea `Actions` selectează `General`
+Team Leader and Developer: Madalina Gomei
+Scrum Master and Developer: Cezara-Alexandra Firu
+Developer: Richard-Iulian Prudel
+Developer: Sara Angelica Smarandoiu
+Developer: Stefan Foca
 
-![GitHub actions settings](./assets/actions-config-step-1.png)
+Clicking on the “Team 3” text in the footer reveals a modal with information about team members and details about their contributions to the project.
 
-Derulează pagina până la ultima secțiune, asigurându-te că opțiunile sunt selectate ca în imaginea următoare și apasă `Save`. Fără aceste setări, constructorul nu va avea drepturi suficiente pentru a automatiza procesul de implementare.
+💻 Our goal was to create a website that matches the desired appearance and fulfills all assigned tasks from the technical specifications. The main purpose of the site is to display movies and view their IMDb ratings and info, search for specific films, and organize the user’s library for managing favorite and queue lists, as well as providing login functionality.
 
-![GitHub actions settings](./assets/actions-config-step-2.png)
+✅ Throughout the project:
 
-Versiunea de producție a proiectului va fi construită automat și implementată pe GitHub. Pages, în ramura `gh-pages`, de fiecare dată când ramura `main` va fi actualizată. De exemplu,
-după un push direct sau după o cerere acceptată pool-request. Pentru aceasta, în fișierul
-`package.json` trebuie de editat câmpul `homepage` și scriptul `build`, înlocuind
-`your_username` și `your_repo_name` pe cele proprii, și trimite modificările la GitHub.
+- We practiced teamwork skills using Git.
+- We followed the Scrum methodology.
+- We consolidated our knowledge of HTML and CSS.
+- We reinforced the JavaScript knowledge gained during the course.
 
-```json
-"homepage": "https://your_username.github.io/your_repo_name/",
-"scripts": {
-  "build": "parcel build src/*.html --public-url /your_repo_name/"
-},
-```
 
-Apoi, accesează setările repository-ului GitHub (`Settings` > `Pages`) și setează distribuția versiunii de producție a fișierelor din folderul `/root` ramurii `gh-pages`, dacă acest lucru nu a fost făcut automat.
+As a result of well-coordinated teamwork 🤝, our project turned out as follows: ⬇
 
-![GitHub Pages settings](./assets/repo-settings.png)
-
-### Starea implementării
-
-Starea implimentării ultimului commit este afișată printr-o pictogramă lângă ID-ul acestuia.
-
-- **Galbenă** - proiectul se asamblează și se implementează.
-- **Verde** - proiectul a fost implementat cu succes.
-- **Roșu** - în timpul listării, asamblării sau implementării a apărut o eroare.
-
-Mai multe informații despre stare pot fi obținute dând clic pe pictogramă și în fereastra derulantă - click pe linkul  `Details`.
-
-![Deployment status](./assets/status.png)
-
-### Pagină live
-
-După un timp, de obicei câteva minute, pagina live poate fi vizualizată la adresa specificată în proprietatea editată `homepage`. De exemplu, iată linkul către versiunea live pentru acest repository
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
-
-Dacă se deschide o pagină goală, asigură-te că fila `Console` nu conține erori legate de căile incorecte ale fișierelor proCSS și JS din proiect (**404**). Probabil că este greșită valoarea proprietății `homepage` sau scriptului `build` în fișierul `package.json`.
-
-## Cum funcționează
-
-![How it works](./assets/how-it-works.png)
-
-1. După fiecare push în ramura `main` a repository-ului GitHub, este rulat un script special (GitHub Action) din fișierul `.github/workflows/deploy.yml`.
-2. Vor fi copiate toate fișierele din repository pe server, unde proiectul va fi inițializat și va trece prin procesul de construcție înainte de implementare
-3. Dacă toți pașii sunt executați cu succes, versiunea de producție asamblată a fișierelor proiectului este trimisă la ramura `gh-pages`. În caz contrar, în jurnalul de execuție al scriptului va fi indicată problema.
+![screencapture-madalinagomei-github-io-team3-JavaScriptProject-2024-06-19-22_25_44](https://github.com/madalinagomei/team3-JavaScriptProject/assets/150043594/9740c074-4d63-4000-b918-42bb5349bd6e)
+![screencapture-madalinagomei-github-io-team3-JavaScriptProject-2024-06-19-22_26_52](https://github.com/madalinagomei/team3-JavaScriptProject/assets/150043594/aa68eb58-acae-4241-9e2a-cd491fc3c6be)
+![screencapture-madalinagomei-github-io-team3-JavaScriptProject-2024-06-19-22_27_32](https://github.com/madalinagomei/team3-JavaScriptProject/assets/150043594/8e6579a1-b4d1-4ffa-b80d-320bdd042ab4)
