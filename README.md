@@ -32,3 +32,8 @@ As a result of well-coordinated teamwork 🤝, our project turned out as follows
 ![screencapture-madalinagomei-github-io-team3-JavaScriptProject-2024-06-19-22_25_44](https://github.com/madalinagomei/team3-JavaScriptProject/assets/150043594/9740c074-4d63-4000-b918-42bb5349bd6e)
 ![screencapture-madalinagomei-github-io-team3-JavaScriptProject-2024-06-19-22_26_52](https://github.com/madalinagomei/team3-JavaScriptProject/assets/150043594/aa68eb58-acae-4241-9e2a-cd491fc3c6be)
 ![screencapture-madalinagomei-github-io-team3-JavaScriptProject-2024-06-19-22_27_32](https://github.com/madalinagomei/team3-JavaScriptProject/assets/150043594/8e6579a1-b4d1-4ffa-b80d-320bdd042ab4)
+![image](https://github.com/user-attachments/assets/99520dc0-44b8-470d-a19e-20130386c888)
+![image](https://github.com/user-attachments/assets/4c925a60-ab9b-43c2-a0ba-0767c618cbb3)
+![image](https://github.com/user-attachments/assets/7f74d8a2-9b7f-4c23-a2ae-514d75477170)
+
+
